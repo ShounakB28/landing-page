@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GRIDWISE — Turning Buildings into Flexible Energy Assets</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="glow"></div>
+
+<nav>
+  <div class="logo"><span class="dot"></span>GRIDWISE</div>
+  <div class="navlinks">
+    <a href="#problem">Problem</a>
+    <a href="#why">Why us</a>
+    <a href="#how">How it works</a>
+    <a href="#for">Who it's for</a>
+    <a href="#demo">Demo</a>
+    <a href="#forecast">Forecast</a>
+    <a href="#roadmap">Roadmap</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <span class="eyebrow-tag">Retrofit energy intelligence for buildings</span>
+  <h1>Buildings don't waste<br><em>electricity</em> — they waste <em>timing</em>.</h1>
+  <p class="lede">GRIDWISE is an AI autopilot that predicts demand, finds the loads a building can safely shift, and moves them away from expensive, peak periods — without touching comfort.</p>
+  <div class="hero-cta">
+    <a class="btn-dark" href="#demo">Watch the peak event ↓</a>
+    <a class="btn-ghost" href="#how">How it decides</a>
+  </div>
+
+  <div class="panel">
+    <div class="panel-top"><span>Building demand · live</span><strong>4.8 kW → 6.1 kW projected</strong></div>
+    <div class="flag">Peak event detected — target 5.0 kW</div>
+    <div class="loadrow"><span>EV charging</span><span class="tag g">shift 20 min</span></div>
+    <div class="loadrow"><span>Water pump</span><span class="tag g">shift 15 min</span></div>
+    <div class="loadrow"><span>HVAC setpoint</span><span class="tag y">23° → 24.5°</span></div>
+    <div class="loadrow"><span>Server room</span><span class="tag r">untouched</span></div>
+    <div class="panel-foot">
+      <div><div class="save">₹1,010 → ₹842</div><span>projected cost today</span></div>
+      <span>peak avoided · comfort maintained</span>
+    </div>
+  </div>
+
+  <div class="logos">
+    <span>EcoStruxure</span><span>Modbus</span><span>DISCOM</span><span>BMS-agnostic</span><span>ESP32</span>
+  </div>
+</header>
+
+<section class="dark" id="problem">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag-label">The problem</span>
+      <h2>At 2 PM, most buildings are running blind.</h2>
+      <p>Sixty percent of rooms are empty, the AC is still on, and the facility manager has no way to know which of hundreds of loads is safe to switch off — or when.</p>
+    </div>
+    <div class="stat-grid">
+      <div class="stat"><b>60%</b><span>rooms empty by early afternoon</span></div>
+      <div class="stat"><b>90 kW</b><span>flexible demand hiding in one mid-size building</span></div>
+      <div class="stat"><b>0</b><span>continuous visibility into which load to cut</span></div>
+      <div class="stat"><b>₹1L+</b><span>monthly bill overrun from poor timing alone</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="compare">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag-label">Before vs after</span>
+      <h2>Same building, two very different relationships with its own data.</h2>
+    </div>
+    <div class="grid-2">
+      <div class="compare-col">
+        <h3>Without GRIDWISE</h3>
+        <div class="sub">what most buildings run today</div>
+        <div class="compare-step">Electricity meter</div>
+        <div class="compare-step">↓ Monthly bill arrives</div>
+        <div class="compare-step">↓ "Why was it so high?"</div>
+        <div class="compare-step">↓ Manual investigation, days later</div>
+        <div class="compare-step">↓ Nothing changes next month</div>
+      </div>
+      <div class="compare-col good">
+        <h3>With GRIDWISE</h3>
+        <div class="sub">sense → predict → optimize → act, every day</div>
+        <div class="compare-step">Sensors + existing meters</div>
+        <div class="compare-step">↓ Real-time visibility</div>
+        <div class="compare-step">↓ Demand forecast, 30–60 min out</div>
+        <div class="compare-step">↓ Flexible load identified</div>
+        <div class="compare-step">↓ Automatic action — lower cost, lower peak</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag-label">Positioning</span>
+      <h2>Not another dashboard. Not another BMS.</h2>
+      <p>Three ways buildings currently handle energy — and where GRIDWISE actually sits.</p>
+    </div>
+    <div class="road">
+      <div class="road-card">
+        <div class="stage">Traditional monitoring</div>
+        <h3>Tells you what happened</h3>
+        <p>Meters and utility bills, after the fact. No forecast, no action — just a record of what you already paid for.</p>
+      </div>
+      <div class="road-card">
+        <div class="stage">Smart building systems</div>
+        <h3>Automates individual systems</h3>
+        <p>HVAC controllers, lighting schedules and BMS platforms that each optimize their own slice, with no shared view of the building's total flexibility.</p>
+      </div>
+      <div class="road-card highlight">
+        <div class="stage">GRIDWISE</div>
+        <h3>Predicts, decides, coordinates</h3>
+        <p>Forecasts what's coming, calculates the safest action across every flexible load, and executes it — before the peak happens, not after.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag-label">The flexibility map</span>
+      <h2>Every load gets sorted before it gets touched.</h2>
+      <p>GRIDWISE never negotiates with a critical load. It only ever moves what's safe to move.</p>
+    </div>
+    <div class="flex-grid">
+      <div class="flex-card"><span class="dotc r"></span>
+        <h3>Critical</h3>
+        <p>Never interrupted, under any forecast or grid signal.</p>
+        <ul><li>Emergency systems</li><li>Medical equipment</li><li>Servers & fire systems</li></ul>
+      </div>
+      <div class="flex-card"><span class="dotc y"></span>
+        <h3>Comfort-sensitive</h3>
+        <p>Adjusted gently, inside a range the occupant already agreed to.</p>
+        <ul><li>AC setpoint · 23–25°C</li><li>Ventilation rate</li><li>Lighting level</li></ul>
+      </div>
+      <div class="flex-card"><span class="dotc g"></span>
+        <h3>Flexible</h3>
+        <p>Fully shiftable — GRIDWISE just needs a deadline, not a fixed start time.</p>
+        <ul><li>EV charging</li><li>Water pumping & heating</li><li>Pre-cooling, battery charge</li></ul>
+      </div>
+    </div>
+
+    <div class="section-head" style="margin-top:80px; margin-bottom:20px;">
+      <span class="tag-label">The loop</span>
+      <h2>Sense → Predict → Decide → Act → Learn</h2>
+    </div>
+    <div class="loop">
+      <div class="loop-step"><div class="n">01</div><strong>Sense</strong><p>Meters, occupancy, temperature</p></div>
+      <div class="loop-arrow">→</div>
+      <div class="loop-step"><div class="n">02</div><strong>Predict</strong><p>Next 30–60 min demand</p></div>
+      <div class="loop-arrow">→</div>
+      <div class="loop-step"><div class="n">03</div><strong>Decide</strong><p>Which load, how much, how long</p></div>
+      <div class="loop-arrow">→</div>
+      <div class="loop-step"><div class="n">04</div><strong>Act</strong><p>Shift, setback, or pre-cool</p></div>
+      <div class="loop-arrow">→</div>
+      <div class="loop-step"><div class="n">05</div><strong>Learn</strong><p>Refine tomorrow's forecast</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="copilot">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag-label">Ask it directly</span>
+      <h2>An energy copilot, not just a chart.</h2>
+      <p>Facility managers don't want to interpret graphs — they want a straight answer.</p>
+    </div>
+    <div class="panel" style="max-width:620px; margin:0 auto;">
+      <div class="panel-top"><span>Ask GRIDWISE</span><strong>live</strong></div>
+      <div class="chat-bubble chat-q">Why is my building using more energy today?</div>
+      <div class="chat-bubble chat-a">Consumption is <strong>17% above baseline</strong>. HVAC Zone 3 is running 29% over expected despite only 34% occupancy.<br><strong>Recommended:</strong> inspect HVAC Zone 3.</div>
+      <div class="chat-bubble chat-q">How can I reduce tomorrow's peak?</div>
+      <div class="chat-bubble chat-a">Predicted peak: <strong>536 kW at 6:15 PM</strong>. Shift EV charging (−22 kW), delay water pumping (−15 kW), optimize HVAC (−12 kW).<br><strong>Potential peak reduction: 49 kW.</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="comfort">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag-label">Comfort & safety</span>
+      <h2>Efficiency without discomfort.</h2>
+      <p>The mandate isn't "turn everything off" — it's optimize inside limits the building already agreed to.</p>
+    </div>
+    <div class="grid-2">
+      <div class="compare-col">
+        <h3>Energy</h3>
+        <ul class="check-list">
+          <li>HVAC energy reduced during low-occupancy hours</li>
+          <li>Lighting draw cut in empty zones automatically</li>
+          <li>Peak demand shaved before it's billed</li>
+        </ul>
+      </div>
+      <div class="compare-col good">
+        <h3>Comfort — never sacrificed</h3>
+        <ul class="check-list">
+          <li>Temperature held inside the agreed 23–25°C band</li>
+          <li>Illumination maintained at occupied desks</li>
+          <li>Occupancy signals always override the schedule</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="for">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag-label">Who it's for</span>
+      <h2>Buildings where electricity is a real line item.</h2>
+    </div>
+    <div class="grid-4">
+      <div class="flex-card">
+        <h3>🏫 Campuses</h3>
+        <p>Hostels, classrooms and labs — dense, predictable occupancy and a steep afternoon HVAC load.</p>
+      </div>
+      <div class="flex-card">
+        <h3>🏢 Offices</h3>
+        <p>HVAC, lighting and occupancy across floors — most flexible demand hides in empty meeting rooms.</p>
+      </div>
+      <div class="flex-card">
+        <h3>🏨 Hotels</h3>
+        <p>Comfort can't be compromised — GRIDWISE optimizes strictly around guaranteed guest comfort limits.</p>
+      </div>
+      <div class="flex-card">
+        <h3>🏘️ Large residential</h3>
+        <p>Common areas, pumps and EV charging — shared infrastructure with genuinely flexible timing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="retrofit">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag-label">No new building required</span>
+      <h2>GRIDWISE is retrofit-first.</h2>
+      <p>It sits on top of whatever meters, BMS or IoT sensors are already installed. Start with one floor, prove it, then scale.</p>
+    </div>
+    <div class="loop">
+      <div class="loop-step"><div class="n">01</div><strong>Existing meters</strong><p>Or BMS, wherever present</p></div>
+      <div class="loop-arrow">→</div>
+      <div class="loop-step"><div class="n">02</div><strong>Low-cost sensors</strong><p>Fill the gaps cheaply</p></div>
+      <div class="loop-arrow">→</div>
+      <div class="loop-step"><div class="n">03</div><strong>GRIDWISE</strong><p>Forecast + optimizer</p></div>
+      <div class="loop-arrow">→</div>
+      <div class="loop-step"><div class="n">04</div><strong>Decision</strong><p>Which load, how much</p></div>
+      <div class="loop-arrow">→</div>
+      <div class="loop-step"><div class="n">05</div><strong>Execution</strong><p>HVAC, lighting, pumps, EV</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="demo">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag-label">Energy OS</span>
+      <h2>One dashboard. One decision at a time.</h2>
+      <p>Not a wall of charts — a running recommendation, with the saving attached to it.</p>
+    </div>
+    <div class="demo">
+      <div>
+        <div class="demo-metric">
+          <div class="lbl">Current demand</div>
+          <div class="val">4.8 kW</div>
+        </div>
+        <div class="demo-metric">
+          <div class="lbl" id="peakLbl">Predicted peak vs target (5.2 kW)<span class="resolved-pill" id="resolvedPill">peak avoided</span></div>
+          <div class="val hot" id="peakVal">6.2 kW</div>
+          <div class="bar"><i id="peakBar" style="width:78%"></i></div>
+        </div>
+        <div class="demo-metric">
+          <div class="lbl">Today's cost vs projected</div>
+          <div class="val" id="costVal">₹1,010 <span style="font-size:16px; color:#9a9c8b;">/ ₹1,010</span></div>
+        </div>
+      </div>
+      <div class="demo-right">
+        <div class="loadrow"><span>EV charging</span><span class="tag g">1.2 kW</span></div>
+        <div class="loadrow"><span>HVAC</span><span class="tag y">2.0 kW</span></div>
+        <div class="loadrow"><span>Lighting</span><span class="tag g">0.8 kW</span></div>
+        <div class="loadrow"><span>Server</span><span class="tag r">0.8 kW</span></div>
+        <div class="panel-foot" style="border-top:1px solid var(--line-dark);">
+          <span style="color:#9a9c8b;">Shift EV charging by 45 min</span>
+          <span class="tag g">save ₹168</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="forecast">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag-label">The full day</span>
+      <h2>One building's 24-hour demand — shaped, not just watched.</h2>
+      <p>Same morning ramp, same evening rush. The difference shows up right at the peak.</p>
+    </div>
+    <div class="forecast-wrap" id="forecastWrap">
+      <div class="forecast-legend">
+        <span><i class="dashed"></i> Without GRIDWISE</span>
+        <span><i class="solid"></i> With GRIDWISE</span>
+        <span><i style="background:rgba(255,196,84,.7); height:2px;"></i> Target (500 kW)</span>
+      </div>
+      <svg class="forecast-svg" viewBox="0 0 900 360" width="100%" height="auto">
+        <line class="forecast-grid" x1="54" y1="318" x2="880" y2="318"/>
+        <line class="forecast-grid" x1="54" y1="243.5" x2="880" y2="243.5"/>
+        <line class="forecast-grid" x1="54" y1="169" x2="880" y2="169"/>
+        <line class="forecast-grid" x1="54" y1="94.5" x2="880" y2="94.5"/>
+        <line class="forecast-grid" x1="54" y1="20" x2="880" y2="20"/>
+        <text x="44" y="322" text-anchor="end">0</text>
+        <text x="44" y="247.5" text-anchor="end">150</text>
+        <text x="44" y="173" text-anchor="end">300</text>
+        <text x="44" y="98.5" text-anchor="end">450</text>
+        <text x="44" y="24" text-anchor="end">600</text>
+        <text x="8" y="12" transform="rotate(0)" font-size="11">kW</text>
+
+        <line class="forecast-target" x1="54" y1="69.7" x2="880" y2="69.7"/>
+        <text x="858" y="64" text-anchor="end" fill="rgba(255,196,84,.85)">target 500 kW</text>
+
+        <path class="forecast-area" fill="url(#forecastGradient)"
+          d="M54.0,244.5 L129.1,248.5 L204.2,250.5 L279.3,242.5 L354.4,189.9 L429.5,138.2 L504.5,129.3 L579.6,121.8 L654.7,104.4 L729.8,76.1 L804.9,111.9 L880.0,183.9 L880.0,318.0 L54.0,318.0 Z"/>
+        <defs>
+          <linearGradient id="forecastGradient" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="rgba(200,251,59,0.32)"/>
+            <stop offset="100%" stop-color="rgba(200,251,59,0)"/>
+          </linearGradient>
+        </defs>
+
+        <path class="forecast-baseline"
+          d="M54.0,238.5 L129.1,243.5 L204.2,246.0 L279.3,236.1 L354.4,178.9 L429.5,124.3 L504.5,114.4 L579.6,104.4 L654.7,84.6 L729.8,54.3 L804.9,121.8 L880.0,193.8"/>
+        <path class="forecast-opt"
+          d="M54.0,244.5 L129.1,248.5 L204.2,250.5 L279.3,242.5 L354.4,189.9 L429.5,138.2 L504.5,129.3 L579.6,121.8 L654.7,104.4 L729.8,76.1 L804.9,111.9 L880.0,183.9"/>
+
+        <circle class="forecast-dot" cx="729.8" cy="54.3" r="4" stroke="var(--muted-dark)"/>
+        <text x="729.8" y="42" text-anchor="middle" fill="var(--paper)">531 kW</text>
+        <circle class="forecast-dot" cx="729.8" cy="76.1" r="4.5" stroke="var(--lime)"/>
+        <text x="729.8" y="98" text-anchor="middle" fill="var(--lime)" class="forecast-callout">487 kW</text>
+
+        <text x="54" y="342" text-anchor="middle">12AM</text>
+        <text x="129" y="342" text-anchor="middle">2AM</text>
+        <text x="204" y="342" text-anchor="middle">4AM</text>
+        <text x="279" y="342" text-anchor="middle">6AM</text>
+        <text x="354" y="342" text-anchor="middle">8AM</text>
+        <text x="430" y="342" text-anchor="middle">10AM</text>
+        <text x="505" y="342" text-anchor="middle">12PM</text>
+        <text x="580" y="342" text-anchor="middle">2PM</text>
+        <text x="655" y="342" text-anchor="middle">4PM</text>
+        <text x="730" y="342" text-anchor="middle">6PM</text>
+        <text x="805" y="342" text-anchor="middle">8PM</text>
+        <text x="880" y="342" text-anchor="middle">10PM</text>
+      </svg>
+    </div>
+    <div class="stat-grid" style="margin-top:24px;">
+      <div class="stat"><b>44 kW</b><span>peak shaved at 6 PM — 531 kW → 487 kW</span></div>
+      <div class="stat"><b>8.3%</b><span>reduction off the evening peak, same day</span></div>
+      <div class="stat"><b>31 kW</b><span>under the 500 kW demand-charge target</span></div>
+      <div class="stat"><b>0</b><span>hours where comfort limits were exceeded</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="kpi">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag-label">Proof, not vibes</span>
+      <h2>Measure every improvement, five ways.</h2>
+    </div>
+    <div class="stat-grid-5">
+      <div class="stat"><b>kWh</b><span>Energy saved against baseline</span></div>
+      <div class="stat"><b>₹</b><span>Financial value delivered monthly</span></div>
+      <div class="stat"><b>kW</b><span>Peak demand avoided at the meter</span></div>
+      <div class="stat"><b>CO₂e</b><span>Carbon avoided from shifted load</span></div>
+      <div class="stat"><b>100%</b><span>Comfort limits respected, every time</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="roadmap">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag-label">Where this goes</span>
+      <h2>One building today. A flexibility network tomorrow.</h2>
+    </div>
+    <div class="road">
+      <div class="road-card"><div class="stage">Stage 1</div><h3>Hackathon MVP</h3><p>One building — energy, occupancy and temperature sensed; lighting, one HVAC load and one flexible appliance controlled; peak forecast and shaved on demo hardware.</p></div>
+      <div class="road-card"><div class="stage">Stage 2</div><h3>Real pilot</h3><p>One college floor or office deployment, integrated with existing smart meters, Modbus, BMS and IoT sensors already on site.</p></div>
+      <div class="road-card"><div class="stage">Stage 3</div><h3>Grid platform</h3><p>Many buildings report flexible demand into one aggregator, so a DISCOM sees a controllable resource, not a hundred separate meters.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="model">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag-label">Built to scale</span>
+      <h2>A believable way this becomes a company.</h2>
+    </div>
+    <div class="road">
+      <div class="road-card"><div class="stage">Hardware</div><h3>Sensors + gateway</h3><p>A low-cost retrofit kit, installed without touching the building's core electrical infrastructure.</p></div>
+      <div class="road-card"><div class="stage">Software</div><h3>GRIDWISE subscription</h3><p>A monthly platform fee for forecasting, optimization and the dashboard — priced per building or per floor.</p></div>
+      <div class="road-card"><div class="stage">Services</div><h3>Energy audits & setup</h3><p>Optional onboarding: comfort-limit calibration, load classification, and an initial savings audit.</p></div>
+    </div>
+    <div class="pill-row"><span>Install</span><span>→</span><span>Subscribe</span><span>→</span><span>Save</span><span>→</span><span>Expand</span></div>
+  </div>
+</section>
+
+
+<section class="dark portal-section" id="portal">
+  <div class="wrap">
+    <div class="section-head" style="margin-left:auto; margin-right:auto; text-align:center;">
+      <span class="tag-label">Under the hood</span>
+      <h2>There's a full engine under this.</h2>
+      <p style="margin-left:auto; margin-right:auto;">Forecasting model, optimization math, ROI logic, target buildings — what's actually running the decision.</p>
+    </div>
+    <div class="portal-overlay-content" style="max-width:640px; margin:0 auto;">
+      <p><strong>Data pipeline:</strong> sensors and meters stream readings continuously, not in nightly batches, so the system is always working off the last few minutes, not yesterday's report. A lightweight stream layer keeps a rolling window of live data, which is what lets the forecast update every few minutes and the optimizer react the moment occupancy or price changes &mdash; instead of waiting for a batch job to run.</p>
+      <p><strong>Forecast:</strong> a lightweight model (regression, random forest, or a moving-average baseline for the MVP) predicts each load's demand for the next 30&ndash;60 minutes from occupancy, temperature and time of day &mdash; simple enough to explain to a judge or a facility manager.</p>
+      <p><strong>Optimizer:</strong> every flexible load carries a power draw, duration, earliest start, latest start and comfort limit. The optimizer only moves what's marked flexible, only inside its deadline, and never touches anything marked critical.</p>
+      <p><strong>In practice:</strong> a manager opens the dashboard and sees live demand, not a static chart. When the forecast crosses the target, the app flags it, proposes a shift (which load, how long, how much it saves) and waits for a tap to confirm &mdash; or runs it automatically if auto-optimize is on. Every action is logged, so the next day's forecast is a little more accurate than the last.</p>
+      <p><strong>ROI:</strong> savings are calculated from the building's own demo data and labelled as an estimate, next to a deployment cost and a payback period &mdash; not a promised percentage.</p>
+      <p style="margin-bottom:0;"><strong>First customers:</strong> colleges, mid-size offices and hotels, where electricity is a real line item and the retrofit pays for itself in months, not years.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pitch">
+  <blockquote>"We don't just measure energy. We make buildings flexible — without replacing the systems already running them."</blockquote>
+  <div class="who">GRIDWISE — an affordable retrofit layer, not another BMS</div>
+</section>
+
+<footer>
+  <div class="logo">GRIDWISE</div>
+  <div>Sense → Predict → Optimize → Act</div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
